@@ -30,3 +30,6 @@ min_quantity: 0
 image_book_admin: [200, 250]
 carts:
   min_quantily: 0
+comment:
+  content_min_length: 2
+  content_max_length: 150

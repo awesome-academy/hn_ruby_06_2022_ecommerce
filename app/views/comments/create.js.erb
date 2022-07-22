@@ -1,0 +1,12 @@
+<% if @comment.save %>
+  $("#all-comments").prepend(
+    "<%= j (render("shared/book_comment", comment: @comment)) %>"
+  );
+  $("#comment-area").val("");
+  $("#comment-image").val("");
+  $("input:radio[name='comment[rate]']").each(function(i) {
+    this.checked = false;
+  });
+<% else %>
+  alert(I18n.t("js.error_comment"));
+<% end %>
