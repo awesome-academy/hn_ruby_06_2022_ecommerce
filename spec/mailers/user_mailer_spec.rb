@@ -20,6 +20,11 @@ RSpec.describe UserMailer, type: :mailer do
 
     it "renders the headers" do
       expect(mail.subject).to eq("Complete order")
+  describe "account_activation" do
+    let(:mail) { UserMailer.account_activation }
+
+    it "renders the headers" do
+      expect(mail.subject).to eq("Account activation")
       expect(mail.to).to eq(["to@example.org"])
       expect(mail.from).to eq(["from@example.com"])
     end

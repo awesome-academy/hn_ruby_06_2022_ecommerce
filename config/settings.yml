@@ -16,6 +16,8 @@ user:
   address_max_length: 250
   min_phone: 6
   max_phone: 20
+  password_reset:
+    password_time: 2
 image:
   default_avatar: "default-avatar.png"
 max_name_book_length: 100

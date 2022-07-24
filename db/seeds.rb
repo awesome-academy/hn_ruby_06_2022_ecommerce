@@ -15,7 +15,9 @@ User.create!(
   password: "123456",
   password_confirmation: "123456",
   role: 0,
-  phone_num: "0589122355"
+  phone_num: "0589122355",
+  activated: true,
+  activated_at: Time.zone.now
 )
 
 
@@ -32,7 +34,9 @@ User.create!(
     password: password,
     password_confirmation: password,
     address: address,
-    phone_num: phone_num
+    phone_num: phone_num,
+    activated: true,
+    activated_at: Time.zone.now
   )
 end
 

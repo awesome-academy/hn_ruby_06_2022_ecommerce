@@ -13,4 +13,14 @@ class UserMailer < ApplicationMailer
     @order = order
     mail to: @order.user.email, subject: t(".subject_complete")
   end
+
+  def account_activation user
+    @user = user
+    mail to: user.email, subject: t(".account")
+  end
+
+  def password_reset user
+    @user = user
+    mail to: user.email, subject: t(".password_r")
+  end
 end

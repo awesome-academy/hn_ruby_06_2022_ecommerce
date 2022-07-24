@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     resources :carts, only: %i(create index update destroy)
     resources :orders, only: %i(new create index show update)
     resources :comments, only: :create
+    resources :account_activations, only: :edit
+    resources :password_resets, only: %i(new create edit update)
   end
 end

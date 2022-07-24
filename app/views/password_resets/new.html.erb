@@ -1,0 +1,16 @@
+<div class="body-app">
+  <div class="my-body-app">
+    <div class="signup">
+      <div class="signup-title"><%= t ".forgot_password" %></div>
+      <div class="signup-form">
+        <div class="signup-form-contain">
+          <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+            <%= f.submit t(".submit_btn"), class: "checkout_btn_submit" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

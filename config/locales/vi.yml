@@ -220,8 +220,9 @@ vi:
     show:
       not_found: "Không tìm thấy user"
     create:
-      welcome_to: "Chào mừng đến với Sample App!"
+      welcome_to: "Chào mừng đến với Ebook!"
       danger: "Tạo thất bại"
+      check_email: "Vui lòng vào email để kích hoạt tài khoản"
     before_action:
       please_login: "Vui lòng đăng nhập"
       not_correct: "Không đúng user"
@@ -270,8 +271,10 @@ vi:
       connect_google: "Kết nối với Google"
       have_account: "Bạn đã có tài khoản ?"
       new_member: "Bạn mới biết đến Estore ?"
+      forgot_password: "(Quên mật khẩu)"
     create:
       invalid: "Tên đăng nhập hoặc mật khẩu không đúng"
+      account_not: "Tài khoản chưa được kích hoạt. Truy cập email để kích hoạt"
   books:
     invalid_format: "must be a valid image format"
     invalid_size: "should be less than 5MB"
@@ -431,3 +434,37 @@ vi:
       text_2: "gồm những sản phẩm sau:"
       text_3: "Giá trị đơn hàng là:"
       status: "Đơn hàng đã được giao"
+  account_activations:
+    edit:
+      account_activated: "Tài khoản đã được kích hoạt"
+      invalid_activation: "Liên kết kích hoạt không hợp lệ"
+  user_mailer:
+    account_activation:
+      sample_app: "Ebook"
+      welcome_to: "Chào mừng bạn đến với Ebook, click vào link bên dưới để kích hoạt tài khoản"
+      activate: "Kích hoạt"
+      account: "Kích hoạt tài khoản"
+    password_reset:
+      password_r: "Đặt lại mật khẩu"
+      to_reset: "Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:"
+      reset_password: "Đặt lại mật khẩu"
+      this_link: "Liên kết này sẽ hết hạn sau hai giờ."
+      if_you_did: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và
+mật khẩu của bạn sẽ vẫn như cũ."
+  password_resets:
+    create:
+      email_sent: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      email_address: "Không tìm thấy địa chỉ email"
+    update:
+      not_empty: "Không được để trống"
+      password_reset: "Mật khẩu đã được đặt lại"
+      update_fail: "Cập nhật thất bại"
+    check_expiration:
+      password_exprired: "Đặt lại mật khẩu đã hết hạn"
+    edit:
+      reset_password: "Đặt lại mật khẩu"
+      confirmation: "Xác nhận"
+      update_btn: "Cập nhật"
+    new:
+      forgot_password: "Quên mật khẩu"
+      submit_btn: "Nộp"
