@@ -23,16 +23,20 @@ class Order < ApplicationRecord
     where "name LIKE ? or id LIKE ?", "%#{key}%", "%#{key}%"
   end)
 
+  def send_mail_pending
+    PendingOrderWorker.perform_async id
+  end
+
   def send_mail_accepted
-    AcceptedOrderJob.set(wait: Settings.number_15.seconds).perform_later self
+    AcceptedOrderWorker.perform_async id
   end
 
   def send_mail_canceled
-    CanceledOrderJob.set(wait: Settings.number_15.seconds).perform_later self
+    CanceledOrderWorker.perform_async id
   end
 
   def send_mail_complete
-    CompleteOrderJob.set(wait: Settings.number_15.seconds).perform_later self
+    CompleteOrderWorker.perform_async id
   end
 
   def handle_order order_params

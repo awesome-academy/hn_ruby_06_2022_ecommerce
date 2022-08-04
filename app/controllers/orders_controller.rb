@@ -88,6 +88,7 @@ class OrdersController < ApplicationController
       @order.save!
       create_order_detail
       clear_carts
+      send_mail_notification
       redirect_to root_path
       flash[:success] = t ".success_checkout"
     end
@@ -110,5 +111,10 @@ class OrdersController < ApplicationController
 
     flash[:danger] = t ".danger"
     redirect_to orders_path
+  end
+
+  def send_mail_notification
+    status = @order.status
+    @order.send "send_mail_#{status}"
   end
 end
